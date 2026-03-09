@@ -7,13 +7,13 @@
 
 ## 📌 О проекте
 
-**Telegram Schedule Bot** --- это Telegram‑бот для удобного просмотра
+**Telegram Schedule Bot** - это Telegram‑бот для удобного просмотра
 расписания занятий.\
 Проект разработан в рамках **индивидуального проекта** и предназначен
 для автоматизации доступа к расписанию через Telegram.
 
 Бот позволяет пользователям быстро получать актуальную информацию о
-занятиях, а администраторам --- управлять системой через удобный
+занятиях, а администраторам - управлять системой через удобный
 интерфейс.
 
 ------------------------------------------------------------------------
@@ -44,26 +44,36 @@
 масштабирование.
 
     src/
+    │   main.py # запуск бота
     │
-    ├── configs/          # конфигурация проекта
-    │   ├── database.py
-    │   └── loader.py
+    ├───configs # конфигурация проекта
+    │       database.py
+    │       loader.py
     │
-    ├── handlers/         # обработчики команд
-    │   ├── admin/
-    │   ├── user/
-    │   └── registration.py
+    ├───handlers # обработчики команд
+    │   │   registration.py
+    │   │   schedule.py
+    │   │   user.py
+    │   │
+    │   └───admin # админ-панель
+    │           edit_about.py
+    │           grades.py
+    │           users.py
+    │           __init__.py
     │
-    ├── keyboards/        # клавиатуры Telegram
-    │   ├── inline.py
-    │   └── reply.py
+    ├───keyboards # клавиатуры
+    │       inline.py
+    │       reply.py
     │
-    ├── middlewares/      # middleware
-    │   └── logger.py
+    ├───middlewares # middleware
+    │       logger.py
     │
-    ├── states/           # FSM состояния
-    │
-    └── main.py           # запуск бота
+    └───states # FSM состояния
+            edit_about.py
+            grades.py
+            registration.py
+            schedule.py
+            users.py
 
 ------------------------------------------------------------------------
 
